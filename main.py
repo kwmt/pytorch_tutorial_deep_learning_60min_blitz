@@ -39,4 +39,10 @@ if __name__ == '__main__':
     print(f"Ones Tensor:\n{ones_tensor}")
     zeros_tensor = torch.zeros(shape)
     print(f"Zeros Tensor:\n{zeros_tensor}")
+
+    tensor = torch.rand(3, 4)
+    print(tensor)
+    print(f"Shape of tensor: {tensor.shape}")
+    print(f"DataType of tensor: {tensor.dtype}")
+    print(f"Device tensor is stored on: {tensor.device}")
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
