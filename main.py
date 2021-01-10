@@ -45,4 +45,26 @@ if __name__ == '__main__':
     print(f"Shape of tensor: {tensor.shape}")
     print(f"DataType of tensor: {tensor.dtype}")
     print(f"Device tensor is stored on: {tensor.device}")
+
+    print(torch.cuda.is_available())
+
+    tensor = torch.ones(4, 4)
+    tensor[:, 1] = 0
+    print(tensor)
+
+    t1 = torch.cat([tensor, tensor, tensor], dim=1)
+    print(t1)
+
+    print(f"tensor.mul(tensor)\n{tensor.mul(tensor)}")
+    print(f"tensor * tensor\n{tensor * tensor}")
+
+    # 行列の積
+    print(f"tensor.matmul(tensor.T) \n {tensor.matmul(tensor.T)} \n")
+    # Alternative syntax:
+    print(f"tensor @ tensor.T \n {tensor @ tensor.T}")
+
+    print(tensor, "\n")
+    tensor.add_(5)
+    print(tensor)
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
